@@ -1,0 +1,47 @@
+digraph LexerDFA {
+    rankdir=LR;
+    node [shape = circle];
+
+    START [label="START"];
+    
+    // Estados aceptadores
+    COMMENT [shape=doublecircle, label="COMMENT"];
+    WHITESPACE [shape=doublecircle, label="WHITESPACE"];
+    DATA_TYPE_KEY [shape=doublecircle, label="DATA_TYPE_KEY"];
+    CONTROL_TYPE_KEY [shape=doublecircle, label="CONTROL_TYPE_KEY"];
+    STORAGE_TYPE_KEY [shape=doublecircle, label="STORAGE_TYPE_KEY"];
+    FUNCTION_TYPE_KEY [shape=doublecircle, label="FUNCTION_TYPE_KEY"];
+    IDENTIFIER [shape=doublecircle, label="IDENTIFIER"];
+    STRING [shape=doublecircle, label="STRING"];
+    CHARACTER [shape=doublecircle, label="CHARACTER"];
+    NUMBER [shape=doublecircle, label="NUMBER"];
+    ARITHMETIC_OPERATOR [shape=doublecircle, label="ARITHMETIC_OPERATOR"];
+    RELATIONAL_OPERATOR [shape=doublecircle, label="RELATIONAL_OPERATOR"];
+    LOGICAL_OPERATOR [shape=doublecircle, label="LOGICAL_OPERATOR"];
+    ASSIGNMENT_OPERATOR [shape=doublecircle, label="ASSIGNMENT_OPERATOR"];
+    PUNCTUATION_OPERATOR [shape=doublecircle, label="PUNCTUATION_OPERATOR"];
+    ERROR [shape=doublecircle, color=red, label="ERROR"];
+
+    // Transiciones desde START
+    START -> COMMENT [label="// o /* ... */"];
+    START -> WHITESPACE [label="espacio / \\n / \\t"];
+    START -> DATA_TYPE_KEY [label="int, float, ..."];
+    START -> CONTROL_TYPE_KEY [label="if, else, for, while"];
+    START -> STORAGE_TYPE_KEY [label="static, const, ..."];
+    START -> FUNCTION_TYPE_KEY [label="void, main, return"];
+    START -> IDENTIFIER [label="id válido"];
+    START -> STRING [label="\"...\""];
+    START -> CHARACTER [label="'a'"];
+    START -> NUMBER [label="123, 3.14, 2e10"];
+    START -> ARITHMETIC_OPERATOR [label="+, -, *, /, %"];
+    START -> RELATIONAL_OPERATOR [label="==, !=, <, >, ..."];
+    START -> LOGICAL_OPERATOR [label="&&, ||, !"];
+    START -> ASSIGNMENT_OPERATOR [label="=, +=, -=, ..."];
+    START -> PUNCTUATION_OPERATOR [label=";, (), {}, ..."];
+    START -> ERROR [label="otro símbolo"];
+
+    // Opción: error desde cualquier otro estado
+    COMMENT -> ERROR [style=dashed, label="mal cerrado"];
+    STRING -> ERROR [style=dashed, label="sin cierre"];
+    CHARACTER -> ERROR [style=dashed, label="mal formado"];
+}

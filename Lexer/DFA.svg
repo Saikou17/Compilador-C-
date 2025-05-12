@@ -1,0 +1,258 @@
+<?xml version="1.0" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="709pt" height="3300pt" viewBox="0.00 0.00 708.95 3299.89">
+<g id="graph0" class="graph" transform="translate(-1015.3856144256497,9559.716907893919) scale(3.5338092207592116)" data-name="LexerDFA">
+
+<polygon fill="white" stroke="none" points="-4,4 -4,-3295.89 704.95,-3295.89 704.95,4 -4,4" style=""/>
+<!-- START -->
+<g id="node1" class="node" pointer-events="visible" data-name="START">
+
+<ellipse fill="none" stroke="black" cx="41.62" cy="-1763.49" rx="41.74" ry="41.74" style=""/>
+<text text-anchor="middle" x="41.62" y="-1759.29" font-family="Times,serif" font-size="14.00" style="">START</text>
+</g>
+<!-- COMMENT -->
+<g id="node2" class="node" pointer-events="visible" data-name="COMMENT">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-3227.49" rx="60.3" ry="60.3" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-3227.49" rx="64.29" ry="64.29" style=""/>
+<text text-anchor="middle" x="359.06" y="-3223.29" font-family="Times,serif" font-size="14.00" style="">COMMENT</text>
+</g>
+<!-- START&#45;&gt;COMMENT -->
+<g id="edge1" class="edge" data-name="START-&gt;COMMENT">
+
+<path fill="none" stroke="black" d="M43.28,-1805.42C46.61,-2006.63 63.03,-2868.22 101.24,-2981.49 130.89,-3069.41 150.38,-3091.66 219.55,-3153.49 239.73,-3171.54 265.1,-3186.72 288.59,-3198.54" style=""/>
+<polygon fill="black" stroke="black" points="286.99,-3201.66 297.51,-3202.9 290.07,-3195.37 286.99,-3201.66" style=""/>
+<text text-anchor="middle" x="151.4" y="-3139.69" font-family="Times,serif" font-size="14.00" style="">// o /* ... */</text>
+</g>
+<!-- WHITESPACE -->
+<g id="node3" class="node" pointer-events="visible" data-name="WHITESPACE">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-3068.49" rx="72.38" ry="72.38" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-3068.49" rx="76.39" ry="76.39" style=""/>
+<text text-anchor="middle" x="359.06" y="-3064.29" font-family="Times,serif" font-size="14.00" style="">WHITESPACE</text>
+</g>
+<!-- START&#45;&gt;WHITESPACE -->
+<g id="edge2" class="edge" data-name="START-&gt;WHITESPACE">
+
+<path fill="none" stroke="black" d="M42.64,-1805.62C43.08,-1971.8 48.35,-2581.71 101.24,-2766.49 131.47,-2872.1 143.89,-2903.85 219.55,-2983.49 236.74,-3001.59 258.58,-3017.32 279.82,-3030.17" style=""/>
+<polygon fill="black" stroke="black" points="277.81,-3033.06 288.21,-3035.11 281.36,-3027.02 277.81,-3033.06" style=""/>
+<text text-anchor="middle" x="151.4" y="-2964.69" font-family="Times,serif" font-size="14.00" style="">espacio / \n / \t</text>
+</g>
+<!-- DATA_TYPE_KEY -->
+<g id="node4" class="node" pointer-events="visible" data-name="DATA_TYPE_KEY">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2878.49" rx="91.51" ry="91.51" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2878.49" rx="95.51" ry="95.51" style=""/>
+<text text-anchor="middle" x="359.06" y="-2874.29" font-family="Times,serif" font-size="14.00" style="">DATA_TYPE_KEY</text>
+</g>
+<!-- START&#45;&gt;DATA_TYPE_KEY -->
+<g id="edge3" class="edge" data-name="START-&gt;DATA_TYPE_KEY">
+
+<path fill="none" stroke="black" d="M43.9,-1805.4C48.43,-1943.44 65.36,-2382.77 101.24,-2519.49 132.85,-2639.95 141.34,-2676.58 219.55,-2773.49 233.64,-2790.95 251.22,-2807.12 269.09,-2821.28" style=""/>
+<polygon fill="black" stroke="black" points="266.61,-2823.8 276.67,-2827.14 270.9,-2818.26 266.61,-2823.8" style=""/>
+<text text-anchor="middle" x="151.4" y="-2749.69" font-family="Times,serif" font-size="14.00" style="">int, float, ...</text>
+</g>
+<!-- CONTROL_TYPE_KEY -->
+<g id="node5" class="node" pointer-events="visible" data-name="CONTROL_TYPE_KEY">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2650.49" rx="110.08" ry="110.08" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2650.49" rx="114.07" ry="114.07" style=""/>
+<text text-anchor="middle" x="359.06" y="-2646.29" font-family="Times,serif" font-size="14.00" style="">CONTROL_TYPE_KEY</text>
+</g>
+<!-- START&#45;&gt;CONTROL_TYPE_KEY -->
+<g id="edge4" class="edge" data-name="START-&gt;CONTROL_TYPE_KEY">
+
+<path fill="none" stroke="black" d="M43.13,-1805.49C45.13,-1893.03 54.83,-2100.73 101.24,-2267.49 135.28,-2389.8 144.16,-2425.35 219.55,-2527.49 231.31,-2543.43 245.43,-2558.82 260.1,-2573" style=""/>
+<polygon fill="black" stroke="black" points="257.52,-2575.38 267.19,-2579.71 262.33,-2570.3 257.52,-2575.38" style=""/>
+<text text-anchor="middle" x="151.4" y="-2502.69" font-family="Times,serif" font-size="14.00" style="">if, else, for, while</text>
+</g>
+<!-- STORAGE_TYPE_KEY -->
+<g id="node6" class="node" pointer-events="visible" data-name="STORAGE_TYPE_KEY">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2405.49" rx="109.42" ry="109.42" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2405.49" rx="113.43" ry="113.43" style=""/>
+<text text-anchor="middle" x="359.06" y="-2401.29" font-family="Times,serif" font-size="14.00" style="">STORAGE_TYPE_KEY</text>
+</g>
+<!-- START&#45;&gt;STORAGE_TYPE_KEY -->
+<g id="edge5" class="edge" data-name="START-&gt;STORAGE_TYPE_KEY">
+
+<path fill="none" stroke="black" d="M47.88,-1804.97C61.52,-1898.68 105.27,-2130.5 219.55,-2283.49 231.44,-2299.42 245.7,-2314.78 260.48,-2328.93" style=""/>
+<polygon fill="black" stroke="black" points="257.94,-2331.34 267.63,-2335.62 262.72,-2326.23 257.94,-2331.34" style=""/>
+<text text-anchor="middle" x="151.4" y="-2250.69" font-family="Times,serif" font-size="14.00" style="">static, const, ...</text>
+</g>
+<!-- FUNCTION_TYPE_KEY -->
+<g id="node7" class="node" pointer-events="visible" data-name="FUNCTION_TYPE_KEY">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2156.49" rx="113.51" ry="113.51" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-2156.49" rx="117.51" ry="117.51" style=""/>
+<text text-anchor="middle" x="359.06" y="-2152.29" font-family="Times,serif" font-size="14.00" style="">FUNCTION_TYPE_KEY</text>
+</g>
+<!-- START&#45;&gt;FUNCTION_TYPE_KEY -->
+<g id="edge6" class="edge" data-name="START-&gt;FUNCTION_TYPE_KEY">
+
+<path fill="none" stroke="black" d="M57.54,-1802.37C68.13,-1828.01 83.57,-1861.84 101.24,-1889.49 144.96,-1957.92 208.01,-2023.79 260.7,-2072.98" style=""/>
+<polygon fill="black" stroke="black" points="258.24,-2075.48 267.95,-2079.71 263,-2070.34 258.24,-2075.48" style=""/>
+<text text-anchor="middle" x="151.4" y="-2011.69" font-family="Times,serif" font-size="14.00" style="">void, main, return</text>
+</g>
+<!-- IDENTIFIER -->
+<g id="node8" class="node" pointer-events="visible" data-name="IDENTIFIER">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1952.49" rx="64.27" ry="64.27" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1952.49" rx="68.28" ry="68.28" style=""/>
+<text text-anchor="middle" x="359.06" y="-1948.29" font-family="Times,serif" font-size="14.00" style="">IDENTIFIER</text>
+</g>
+<!-- START&#45;&gt;IDENTIFIER -->
+<g id="edge7" class="edge" data-name="START-&gt;IDENTIFIER">
+
+<path fill="none" stroke="black" d="M74.12,-1790.37C82.7,-1797.24 92.14,-1804.39 101.24,-1810.49 161.55,-1850.91 234.29,-1890.33 286.94,-1917.34" style=""/>
+<polygon fill="black" stroke="black" points="285.34,-1920.46 295.84,-1921.89 288.53,-1914.22 285.34,-1920.46" style=""/>
+<text text-anchor="middle" x="151.4" y="-1872.69" font-family="Times,serif" font-size="14.00" style="">id válido</text>
+</g>
+<!-- STRING -->
+<g id="node9" class="node" pointer-events="visible" data-name="STRING">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1816.49" rx="45.83" ry="45.83" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1816.49" rx="49.82" ry="49.82" style=""/>
+<text text-anchor="middle" x="359.06" y="-1812.29" font-family="Times,serif" font-size="14.00" style="">STRING</text>
+</g>
+<!-- START&#45;&gt;STRING -->
+<g id="edge8" class="edge" data-name="START-&gt;STRING">
+
+<path fill="none" stroke="black" d="M83.21,-1770.31C137.8,-1779.49 235.28,-1795.87 298.27,-1806.45" style=""/>
+<polygon fill="black" stroke="black" points="297.68,-1809.9 308.12,-1808.1 298.84,-1803 297.68,-1809.9" style=""/>
+<text text-anchor="middle" x="151.4" y="-1793.69" font-family="Times,serif" font-size="14.00" style="">"..."</text>
+</g>
+<!-- CHARACTER -->
+<g id="node10" class="node" pointer-events="visible" data-name="CHARACTER">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1675.49" rx="69.54" ry="69.54" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1675.49" rx="73.54" ry="73.54" style=""/>
+<text text-anchor="middle" x="359.06" y="-1671.29" font-family="Times,serif" font-size="14.00" style="">CHARACTER</text>
+</g>
+<!-- START&#45;&gt;CHARACTER -->
+<g id="edge9" class="edge" data-name="START-&gt;CHARACTER">
+
+<path fill="none" stroke="black" d="M82.25,-1752.44C130.8,-1738.89 214.27,-1715.61 276.7,-1698.19" style=""/>
+<polygon fill="black" stroke="black" points="277.55,-1701.59 286.25,-1695.53 275.67,-1694.84 277.55,-1701.59" style=""/>
+<text text-anchor="middle" x="151.4" y="-1750.69" font-family="Times,serif" font-size="14.00" style="">'a'</text>
+</g>
+<!-- NUMBER -->
+<g id="node11" class="node" pointer-events="visible" data-name="NUMBER">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1527.49" rx="52.21" ry="52.21" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1527.49" rx="56.2" ry="56.2" style=""/>
+<text text-anchor="middle" x="359.06" y="-1523.29" font-family="Times,serif" font-size="14.00" style="">NUMBER</text>
+</g>
+<!-- START&#45;&gt;NUMBER -->
+<g id="edge10" class="edge" data-name="START-&gt;NUMBER">
+
+<path fill="none" stroke="black" d="M69.71,-1732.23C79.42,-1721.39 90.6,-1709.29 101.24,-1698.69 151.3,-1648.83 160.65,-1631.52 219.55,-1592.49 243.19,-1576.83 271.2,-1562.93 295.82,-1552.04" style=""/>
+<polygon fill="black" stroke="black" points="296.97,-1555.36 304.75,-1548.17 294.19,-1548.94 296.97,-1555.36" style=""/>
+<text text-anchor="middle" x="151.4" y="-1702.69" font-family="Times,serif" font-size="14.00" style="">123, 3.14, 2e10</text>
+</g>
+<!-- ARITHMETIC_OPERATOR -->
+<g id="node12" class="node" pointer-events="visible" data-name="ARITHMETIC_OPERATOR">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1322.49" rx="126.27" ry="126.27" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1322.49" rx="130.26" ry="130.26" style=""/>
+<text text-anchor="middle" x="359.06" y="-1318.29" font-family="Times,serif" font-size="14.00" style="">ARITHMETIC_OPERATOR</text>
+</g>
+<!-- START&#45;&gt;ARITHMETIC_OPERATOR -->
+<g id="edge11" class="edge" data-name="START-&gt;ARITHMETIC_OPERATOR">
+
+<path fill="none" stroke="black" d="M50.49,-1722.57C59,-1684.81 74.99,-1628.18 101.24,-1584.69 140.23,-1520.1 198.09,-1459.16 249.03,-1412.32" style=""/>
+<polygon fill="black" stroke="black" points="251.31,-1414.98 256.35,-1405.65 246.6,-1409.8 251.31,-1414.98" style=""/>
+<text text-anchor="middle" x="151.4" y="-1588.69" font-family="Times,serif" font-size="14.00" style="">+, -, *, /, %</text>
+</g>
+<!-- RELATIONAL_OPERATOR -->
+<g id="node13" class="node" pointer-events="visible" data-name="RELATIONAL_OPERATOR">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1042.49" rx="127.97" ry="127.97" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-1042.49" rx="131.97" ry="131.97" style=""/>
+<text text-anchor="middle" x="359.06" y="-1038.29" font-family="Times,serif" font-size="14.00" style="">RELATIONAL_OPERATOR</text>
+</g>
+<!-- START&#45;&gt;RELATIONAL_OPERATOR -->
+<g id="edge12" class="edge" data-name="START-&gt;RELATIONAL_OPERATOR">
+
+<path fill="none" stroke="black" d="M46.65,-1721.78C53.48,-1659 69.78,-1537 101.24,-1437.69 138.88,-1318.9 148.57,-1285.92 219.55,-1183.49 229.84,-1168.64 241.76,-1153.93 254.21,-1139.94" style=""/>
+<polygon fill="black" stroke="black" points="256.45,-1142.67 260.57,-1132.9 251.26,-1137.97 256.45,-1142.67" style=""/>
+<text text-anchor="middle" x="151.4" y="-1441.69" font-family="Times,serif" font-size="14.00" style="">==, !=, &lt;, &gt;, ...</text>
+</g>
+<!-- LOGICAL_OPERATOR -->
+<g id="node14" class="node" pointer-events="visible" data-name="LOGICAL_OPERATOR">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-779.49" rx="109.42" ry="109.42" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-779.49" rx="113.43" ry="113.43" style=""/>
+<text text-anchor="middle" x="359.06" y="-775.29" font-family="Times,serif" font-size="14.00" style="">LOGICAL_OPERATOR</text>
+</g>
+<!-- START&#45;&gt;LOGICAL_OPERATOR -->
+<g id="edge13" class="edge" data-name="START-&gt;LOGICAL_OPERATOR">
+
+<path fill="none" stroke="black" d="M42.84,-1721.46C44.21,-1625.76 52.66,-1384.89 101.24,-1190.69 134.95,-1055.97 139.03,-1014.64 219.55,-901.49 231.07,-885.3 245.14,-869.8 259.84,-855.59" style=""/>
+<polygon fill="black" stroke="black" points="262.09,-858.29 266.97,-848.88 257.29,-853.19 262.09,-858.29" style=""/>
+<text text-anchor="middle" x="151.4" y="-1194.69" font-family="Times,serif" font-size="14.00" style="">&amp;&amp;, ||, !</text>
+</g>
+<!-- ASSIGNMENT_OPERATOR -->
+<g id="node15" class="node" pointer-events="visible" data-name="ASSIGNMENT_OPERATOR">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-515.49" rx="129.15" ry="129.15" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-515.49" rx="133.15" ry="133.15" style=""/>
+<text text-anchor="middle" x="359.06" y="-511.29" font-family="Times,serif" font-size="14.00" style="">ASSIGNMENT_OPERATOR</text>
+</g>
+<!-- START&#45;&gt;ASSIGNMENT_OPERATOR -->
+<g id="edge14" class="edge" data-name="START-&gt;ASSIGNMENT_OPERATOR">
+
+<path fill="none" stroke="black" d="M43.49,-1721.31C46.88,-1571.76 61.09,-1067.53 101.24,-911.69 132.33,-791.02 148.75,-760.04 219.55,-657.49 229.68,-642.83 241.37,-628.28 253.58,-614.42" style=""/>
+<polygon fill="black" stroke="black" points="256.16,-616.78 260.24,-607 250.95,-612.11 256.16,-616.78" style=""/>
+<text text-anchor="middle" x="151.4" y="-915.69" font-family="Times,serif" font-size="14.00" style="">=, +=, -=, ...</text>
+</g>
+<!-- PUNCTUATION_OPERATOR -->
+<g id="node16" class="node" pointer-events="visible" data-name="PUNCTUATION_OPERATOR">
+
+<ellipse fill="none" stroke="black" cx="359.06" cy="-224.49" rx="135.51" ry="135.51" style=""/>
+<ellipse fill="none" stroke="black" cx="359.06" cy="-224.49" rx="139.51" ry="139.51" style=""/>
+<text text-anchor="middle" x="359.06" y="-220.29" font-family="Times,serif" font-size="14.00" style="">PUNCTUATION_OPERATOR</text>
+</g>
+<!-- START&#45;&gt;PUNCTUATION_OPERATOR -->
+<g id="edge15" class="edge" data-name="START-&gt;PUNCTUATION_OPERATOR">
+
+<path fill="none" stroke="black" d="M43,-1721.45C44.89,-1545.98 55.05,-871.65 101.24,-664.69 131.67,-528.35 144.47,-491.3 219.55,-373.49 228.9,-358.82 239.79,-344.27 251.27,-330.35" style=""/>
+<polygon fill="black" stroke="black" points="253.75,-332.83 257.51,-322.92 248.39,-328.33 253.75,-332.83" style=""/>
+<text text-anchor="middle" x="151.4" y="-668.69" font-family="Times,serif" font-size="14.00" style="">;, (), {}, ...</text>
+</g>
+<!-- ERROR -->
+<g id="node17" class="node" pointer-events="visible" data-name="ERROR">
+
+<ellipse fill="none" stroke="red" cx="653.72" cy="-1720.49" rx="43.45" ry="43.45" style=""/>
+<ellipse fill="none" stroke="red" cx="653.72" cy="-1720.49" rx="47.47" ry="47.47" style=""/>
+<text text-anchor="middle" x="653.72" y="-1716.29" font-family="Times,serif" font-size="14.00" style="">ERROR</text>
+</g>
+<!-- START&#45;&gt;ERROR -->
+<g id="edge16" class="edge" data-name="START-&gt;ERROR">
+
+<path fill="none" stroke="black" d="M42.8,-1721.3C43.93,-1520.94 51.6,-664.49 101.24,-402.49 131.32,-243.72 88,-152.54 219.55,-58.69 320.5,13.33 406.92,24.84 498.56,-58.69 619.48,-168.91 647.03,-1378.28 651.84,-1661.43" style=""/>
+<polygon fill="black" stroke="black" points="648.33,-1661.21 652,-1671.15 655.33,-1661.1 648.33,-1661.21" style=""/>
+<text text-anchor="middle" x="359.06" y="-63.69" font-family="Times,serif" font-size="14.00" style="">otro símbolo</text>
+</g>
+<!-- COMMENT&#45;&gt;ERROR -->
+<g id="edge17" class="edge" data-name="COMMENT-&gt;ERROR">
+
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M421.01,-3209.7C449.21,-3198.27 480.42,-3180.39 498.56,-3153.49 576.66,-3037.76 635.76,-2034.57 649.62,-1779.36" style=""/>
+<polygon fill="black" stroke="black" points="653.1,-1779.81 650.14,-1769.64 646.11,-1779.43 653.1,-1779.81" style=""/>
+<text text-anchor="middle" x="552.52" y="-3103.69" font-family="Times,serif" font-size="14.00" style="">mal cerrado</text>
+</g>
+<!-- STRING&#45;&gt;ERROR -->
+<g id="edge18" class="edge" data-name="STRING-&gt;ERROR">
+
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M406.75,-1801.18C458.65,-1784.15 542.38,-1756.69 597.48,-1738.61" style=""/>
+<polygon fill="black" stroke="black" points="598.26,-1742.04 606.67,-1735.6 596.07,-1735.39 598.26,-1742.04" style=""/>
+<text text-anchor="middle" x="552.52" y="-1766.69" font-family="Times,serif" font-size="14.00" style="">sin cierre</text>
+</g>
+<!-- CHARACTER&#45;&gt;ERROR -->
+<g id="edge19" class="edge" data-name="CHARACTER-&gt;ERROR">
+
+<path fill="none" stroke="black" stroke-dasharray="5,2" d="M432.02,-1686.56C482.37,-1694.3 548.71,-1704.5 595.47,-1711.69" style=""/>
+<polygon fill="black" stroke="black" points="594.7,-1715.11 605.12,-1713.17 595.76,-1708.2 594.7,-1715.11" style=""/>
+<text text-anchor="middle" x="552.52" y="-1713.69" font-family="Times,serif" font-size="14.00" style="">mal formado</text>
+</g>
+</g>
+</svg>

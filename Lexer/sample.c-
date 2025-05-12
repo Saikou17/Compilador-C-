@@ -1,0 +1,20 @@
+
+/* Programa de prueba en C- */
+
+int contador = 0;
+float promedio = 10.5;
+char letra = 'a';
+double pi = 3.1416;
+
+void main() {
+    int i;
+    for (i = 0; i < 10; i = i + 1) {
+        if (i % 2 == 0) {
+            contador = contador + 1;
+        }
+    }
+    
+    promedio = contador / 10;
+
+    int error = 3indice;
+}

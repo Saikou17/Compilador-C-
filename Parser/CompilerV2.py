@@ -1,27 +1,34 @@
-from parser import *
 from globalTypes import *
+from lexer import *
+from parser import *
 
-# Función para imprimir el árbol de sintaxis de manera jerárquica
-def printArbol(arbol, nivel=0, prefijo="└── "):
-    """ Imprime el árbol de sintaxis en una estructura visual similar a un árbol de directorios """
-    if arbol is not None:
-        print(" " * (nivel * 4) + prefijo + arbol.valor)
-        if arbol.hijosIzq or arbol.hijosDer:
-            printArbol(arbol.hijosIzq, nivel + 1, "├── ")
-            printArbol(arbol.hijosDer, nivel + 1, "└── ")
+class InputBuffer:
+    def __init__(self, programa=""):
+        self.programa = programa
+        self.posicion = 0
+        self.progLong = len(programa)
+        self.linea_actual = 1
+        self.inicio_linea = 0
 
-# Leemos el archivo de entrada
-f = open('sample.c-', 'r')
-programa = f.read()
-progLong = len(programa)  # Longitud original
-programa += '$'  # Agregar EOF
-posicion = 0  # Posición inicial
-print("Texto fuente:\n", programa)  
+def parserInorder(nodo):
+    if nodo is None:
+        return
+    parserInorder(nodo.hijosIzq)
+    print(nodo.valor)
+    parserInorder(nodo.hijosDer)
+    
+def main():
+    # Abrimos y leemos el archivo fuente
+    f = open("sample.c-", "r")
+    #Creamos una instancia de la clase globales
+    buffer = InputBuffer(f.read()+"$")
 
-# Cargamos las variables globales
-globales(programa, posicion, progLong)
+    # Llamamos a getToken() hasta llegar al final del archivo
+    AST = parser(buffer,True)
 
-# Inicializamos el parser
-AST = parser(True)  
-print("\nÁrbol de Sintaxis Abstracta:\n")
-printArbol(AST)  # Imprimimos el árbol de sintaxis
+    # Imprimimos el AST
+    parserInorder(AST)
+
+if __name__ == "__main__":
+    main()
+

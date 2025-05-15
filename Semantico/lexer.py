@@ -24,73 +24,42 @@ token_patterns = {
     TokenType.ENDFILE: r'\$',
 }
 
-# Variables globales
-programa = "" # Texto fuente
-posicion = 0 # Posición actual en el texto fuente
-progLong = 0 # Longitud del texto fuente
-linea_actual = 1    # Línea actual en el texto fuente
-inicio_linea = 0 # Inicio de la línea actual
-imprime = True # Bandera para imprimir tokens
 
-# Inicialización de texto fuente
-def globales_lexer(prog, pos, longi):
-    global programa, posicion, progLong, linea_actual, inicio_linea
-    programa = prog
-    posicion = pos
-    progLong = longi
-    linea_actual = 1
-    inicio_linea = 0
+def getToken(buffer, imprime=False):
+    if buffer.posicion >= len(buffer.programa):
+        return TokenType.ENDFILE, ''
 
-# Obtener el siguiente token
-def getToken(imprimeFlag=False):
-    global posicion, linea_actual, inicio_linea, imprime
-    imprime = imprimeFlag # Actualiza la bandera de impresión
+    restante = buffer.programa[buffer.posicion:]
 
-    #Revisamos si la posición actual es mayor o igual a la longitud del programa
-    if posicion >= len(programa):
-        return TokenType.ENDFILE, '$'
-
-    # Resto del código desde la posición actual para revisarla
-    restante = programa[posicion:]
-
-    # Compilamos el scanner de patrones
     scanner = re.Scanner([
-        #Creamos un tupla que contiene el patrón y la función que se ejecutará al encontrar un token
         (pattern, lambda scanner, token, t=ttype: (t, token))
-        # Recorremos el diccionario de patrones de tokens
         for ttype, pattern in token_patterns.items()
     ])
 
-    # Escaneamos el resto del código y obtenemos los tokens
     tokens, remainder = scanner.scan(restante)
-    # Si no se encontraron tokens, se considera un error léxico
+
     for ttype, lexema in tokens:
         if ttype == TokenType.WHITESPACE:
-            # Actualizar línea si hay saltos
             saltos = lexema.count('\n')
             if saltos > 0:
-                linea_actual += saltos
-                inicio_linea = posicion + lexema.rfind('\n') + 1
-            posicion += len(lexema)
+                buffer.linea_actual += saltos
+                buffer.inicio_linea = buffer.posicion + lexema.rfind('\n') + 1
+            buffer.posicion += len(lexema)
             continue
 
         if imprime:
-            print(f"siguiente token({ttype.name}, '{lexema}')")
+            print(f"({ttype.name}, '{lexema}')")
 
-        posicion += len(lexema)
+        buffer.posicion += len(lexema)
         return ttype, lexema
 
-    # Si hay caracteres no reconocidos
     if remainder.strip():
-        #Obtenemos la ubicacion del error 
-        error_pos = posicion + len(restante) - len(remainder)
-        columna = error_pos - inicio_linea + 1
-        linea = programa[inicio_linea:programa.find('\n', inicio_linea)]
-        print(f"Línea {linea_actual}: Error en la formación del token:")
+        error_pos = buffer.posicion + len(restante) - len(remainder)
+        columna = error_pos - buffer.inicio_linea + 1
+        linea = buffer.programa[buffer.inicio_linea:buffer.programa.find('\n', buffer.inicio_linea)]
+        print(f"Línea {buffer.linea_actual}: Error en la formación del token:")
         print(linea)
         print(" " * (columna - 1) + "^")
+        sys.exit(f"Se encontró un error léxico en la línea {buffer.linea_actual}.")
 
-        # Finaliza ejecución inmediatamente
-        sys.exit(f"Se encontró un error léxico en la línea {linea_actual}.")
-
-    return TokenType.ENDFILE, '$'
+    return TokenType.ENDFILE, ''
